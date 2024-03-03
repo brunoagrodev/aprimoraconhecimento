@@ -1,13 +1,26 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { Link as ScrollLink } from 'react-scroll'
 
 export default function HeaderMenu() {
   const [open, setOpen] = useState(false)
+  const anchorRef = useRef<HTMLButtonElement>(null)
 
   const handleMenu = () => {
     setOpen((prev) => !prev)
+  }
+
+  const handleClose = (event: Event | React.SyntheticEvent) => {
+    if (
+      anchorRef.current &&
+      anchorRef.current.contains(event.target as HTMLElement)
+    ) {
+      return
+    }
+
+    setOpen(false)
   }
 
   return (
@@ -22,11 +35,31 @@ export default function HeaderMenu() {
         />
       </div>
       <div className="menu-buttons hidden flex-row items-center justify-center gap-5 md:flex">
-        <a href="#">Nosso diferenciais</a>
-        <a href="#">Como trabalhamos</a>
-        <a href="#">Serviços</a>
-        <a href="#">Equipe</a>
-        <a href="#">Contato</a>
+        <ScrollLink to="differences" smooth={true} duration={500} offset={-70}>
+          <p className="cursor-pointer" onClick={handleClose}>
+            Nosso diferenciais
+          </p>
+        </ScrollLink>
+        <ScrollLink to="work" smooth={true} duration={500} offset={-70}>
+          <p className="cursor-pointer" onClick={handleClose}>
+            Como trabalhamos
+          </p>
+        </ScrollLink>
+        <ScrollLink to="services" smooth={true} duration={500} offset={-70}>
+          <p className="cursor-pointer" onClick={handleClose}>
+            Serviços
+          </p>
+        </ScrollLink>
+        <ScrollLink to="team" smooth={true} duration={500} offset={-70}>
+          <p className="cursor-pointer" onClick={handleClose}>
+            Equipe
+          </p>
+        </ScrollLink>
+        <ScrollLink to="contato" smooth={true} duration={500} offset={-70}>
+          <p className="cursor-pointer" onClick={handleClose}>
+            Contato
+          </p>
+        </ScrollLink>
       </div>
       <div className="flex md:hidden">
         <button
@@ -46,11 +79,46 @@ export default function HeaderMenu() {
               </button>
             </div>
             <div className="flex flex-col items-center justify-center gap-8">
-              <a href="#">Nosso diferenciais</a>
-              <a href="#">Como trabalhamos</a>
-              <a href="#">Serviços</a>
-              <a href="#">Equipe</a>
-              <a href="#">Contato</a>
+              <ScrollLink
+                to="differences"
+                smooth={true}
+                duration={1000}
+                offset={-70}
+              >
+                <p className="cursor-pointer" onClick={handleClose}>
+                  Nosso diferenciais
+                </p>
+              </ScrollLink>
+              <ScrollLink to="work" smooth={true} duration={1000} offset={-70}>
+                <p className="cursor-pointer" onClick={handleClose}>
+                  Como trabalhamos
+                </p>
+              </ScrollLink>
+              <ScrollLink
+                to="services"
+                smooth={true}
+                duration={1000}
+                offset={-70}
+              >
+                <p className="cursor-pointer" onClick={handleClose}>
+                  Serviços
+                </p>
+              </ScrollLink>
+              <ScrollLink to="team" smooth={true} duration={1000} offset={-70}>
+                <p className="cursor-pointer" onClick={handleClose}>
+                  Equipe
+                </p>
+              </ScrollLink>
+              <ScrollLink
+                to="contato"
+                smooth={true}
+                duration={1000}
+                offset={-70}
+              >
+                <p className="cursor-pointer" onClick={handleClose}>
+                  Contato
+                </p>
+              </ScrollLink>
             </div>
           </div>
         )}

@@ -1,6 +1,19 @@
+'use client'
+
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 const Intro = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   return (
-    <section className="h-auto overflow-hidden rounded-3xl bg-deepBlue md:h-auto md:rounded-[56px]">
+    <section data-aos="fade-up" className="h-auto overflow-hidden rounded-3xl bg-deepBlue md:h-auto md:rounded-[56px]">
       <div className="item-center container flex flex-col justify-center gap-8 md:py-10 lg:px-[63px] lg:text-center">
         <h1 className="mt-14 px-5 text-[40px] font-bold text-white md:text-6xl">
           Conduzimos nossos projetos com dedicação e paixão, transformando

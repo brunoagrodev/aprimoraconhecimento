@@ -1,4 +1,9 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const textContent = [
   {
@@ -25,8 +30,15 @@ const textContent = [
 ]
 
 const WorkContent = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   return (
-    <section className="mt-[72px]">
+    <section className="aos-init mt-[72px]" data-aos="fade-up" id="work">
       <div className="container w-full justify-center rounded-[56px] bg-deepBlue pb-24 pt-16">
         <h1 className="pb-12 text-center font-sans text-6xl font-bold text-white">
           Como trabalhamos
@@ -36,6 +48,7 @@ const WorkContent = () => {
             <article
               key={index}
               className="mx-6 rounded-2xl bg-white p-12 lg:mx-auto lg:w-[75%]"
+              data-aos="fade-up"
             >
               <div className="my-auto gap-12 lg:flex">
                 <Image

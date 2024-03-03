@@ -2,9 +2,18 @@
 
 import * as Collapsible from '@radix-ui/react-collapsible'
 import { ChevronDown } from 'lucide-react'
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Question = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   const textAccord = [
     {
       question: 'O que oferecemos como produto ou serviço?',
@@ -36,7 +45,7 @@ const Question = () => {
       reply: (
         <>
           <p>Aceitamos as seguintes formas de pagamento:</p>
-          <ul className="ml-5     list-disc">
+          <ul className="ml-5 list-disc">
             <li className="">Pix</li>
             <li>Transferência bancária</li>
             <li>Boleto bancário</li>
@@ -47,7 +56,7 @@ const Question = () => {
   ]
 
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container max-w-[1160px] px-6 pb-14 pt-14 md:flex md:pt-20">
         <h1 className="text-5xl font-bold text-darkBlue md:text-6xl">
           Perguntas frequentes
@@ -57,8 +66,9 @@ const Question = () => {
             <Collapsible.Root
               key={index}
               className="group mt-12 w-full rounded-[33px] border-2 border-darkBlue  p-3 font-lustria font-normal md:mt-0"
+              data-aos="fade-up"
             >
-              <Collapsible.Trigger className="flex w-full  transform items-center justify-center text-start text-lg text-darkBlue lg:text-xl">
+              <Collapsible.Trigger className="flex w-full transform items-center justify-center text-start text-lg text-darkBlue lg:text-xl">
                 <p>{item.question}</p>
                 <ChevronDown className="ml-auto min-w-[30px] duration-200 group-data-[state='open']:rotate-180" />
               </Collapsible.Trigger>

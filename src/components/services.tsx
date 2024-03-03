@@ -1,8 +1,19 @@
+'use client'
+
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import Image from 'next/image'
-import React from 'react'
 import { Button } from './button'
 
 const Services = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   const cards = [
     {
       title: 'Websites',
@@ -39,8 +50,8 @@ const Services = () => {
   const width = typeof window !== 'undefined' ? window.innerWidth : 0
 
   return (
-    <section className="mt-[72px]">
-      <div className="max-w-[1160px]container px-6 md:px-0 lg:px-[59px]">
+    <section className="aos-init mt-[72px]" data-aos="fade-up" id="services">
+      <div className="container max-w-[1160px] px-6 md:px-0 lg:px-[59px]">
         <h1 className="mb-[56px] text-center text-3xl font-bold text-deepBlue md:text-6xl">
           Nossos serviços
         </h1>
@@ -53,10 +64,12 @@ const Services = () => {
               index === 1 || index === 2
                 ? 'md:bg-darkBlue md:text-white'
                 : 'md:bg-[#FCD6B9] md:text-darkText'
+
             return (
               <article
                 key={index}
                 className={`${span1} ${span2} ${bg} max-[768px]:${width < 768 && index % 2 === 0 ? ' max-[768px]:bg-[#FCD6B9] max-[768px]:text-darkText' : ' max-[768px]:bg-darkBlue max-[768px]:text-white'} mx-auto rounded-2xl`}
+                data-aos="fade-up"
               >
                 <div className="mx-[32px] space-y-4 py-[68px] md:my-[75px]">
                   <Image src={item.icon} width={113} height={113} alt="" />
@@ -68,8 +81,9 @@ const Services = () => {
           })}
           <article
             className={`col-span-6 flex items-center rounded-2xl bg-darkBlue p-[78px]`}
+            data-aos="fade-up"
           >
-            <div className=" flex w-full items-center justify-center ">
+            <div className="flex w-full items-center justify-center">
               <Button color="lightOrange">FALE CONOSCO!</Button>
             </div>
           </article>

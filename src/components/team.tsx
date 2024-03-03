@@ -1,6 +1,18 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export const Team = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   const teamContent = [
     {
       name: 'Bruno Ferrari',
@@ -59,16 +71,17 @@ export const Team = () => {
   ]
 
   return (
-    <section>
+    <section className="aos-init" data-aos="fade-up" id="team">
       <div className="container max-w-[900px] px-7 md:px-0">
         <h1 className="my-14 text-center text-4xl font-bold text-darkBlue md:text-6xl">
           Nossa equipe
         </h1>
-        <div className="grid grid-cols-2  gap-2 last:mx-auto md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-2 last:mx-auto md:grid-cols-3">
           {teamContent.map((item, index) => (
             <article
               key={index}
               className="center mx-auto mt-4 grid-flow-row grid-cols-1 last:col-span-full md:last:col-span-1"
+              data-aos="fade-up"
             >
               <div className="flex flex-col space-y-2 justify-self-center text-center">
                 <Image src={item.src} width={177} height={240} alt={item.alt} />

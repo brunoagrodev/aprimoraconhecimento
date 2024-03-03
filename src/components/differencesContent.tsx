@@ -1,4 +1,9 @@
+'use client'
+
+import React, { useEffect } from 'react'
 import Image from 'next/image'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { Button } from './button'
 
 const textContent = [
@@ -23,8 +28,15 @@ const textContent = [
 ]
 
 const DifferencesContent = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   return (
-    <section className="mt-16">
+    <section className="mt-16" data-aos="fade-up" id="differences">
       <div className="container">
         <h1 className="text-center font-sans text-[40px] font-bold text-slate-800 sm:mb-[4.3125rem] sm:text-6xl">
           Nossos diferenciais
@@ -56,7 +68,10 @@ const DifferencesContent = () => {
           ))}
         </div>
       </div>
-      <div className="mb-2 mt-10 flex justify-center sm:mt-16">
+      <div
+        className="mb-2 mt-10 flex justify-center sm:mt-16"
+        data-aos="fade-up"
+      >
         <Button size="sm">ENTRAR EM CONTATO</Button>
       </div>
     </section>

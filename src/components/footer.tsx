@@ -1,11 +1,25 @@
+'use client'
+
+import React, { useEffect } from 'react'
 import Image from 'next/image'
-import React from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import PhoneNumberForm from './phonenumberform'
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   return (
-    <div className="footer">
-      <div className="footer-up container my-10 w-full rounded-[56px] bg-[#101b2b] py-10">
+    <div className="footer" id="contato">
+      <div
+        className="footer-up container my-10 w-full rounded-[56px] bg-[#101b2b] py-10"
+        data-aos="fade-up"
+      >
         <h1 className="text-center text-5xl font-bold text-white md:text-center">
           Podemos ajudar ?
         </h1>
