@@ -12,7 +12,7 @@ export default function HeaderMenu() {
   }
 
   return (
-    <div className="menu w-100% container fixed z-50 mb-14 flex h-20 flex-row justify-between bg-white px-5 py-5 sm:px-0">
+    <div className="menu container fixed z-50 mb-14 flex h-20 w-[100vw] flex-row justify-between bg-white px-5 py-5 sm:px-0">
       <div className="logo">
         <Link href={'/'}>
           <Image
@@ -61,7 +61,7 @@ export default function HeaderMenu() {
           <div className="h-1 w-7 rounded bg-black"></div>
         </button>
         {open && (
-          <div className="animate-fadeInLeft absolute left-0 top-0 z-50 flex h-[100vh] w-full flex-col items-center gap-10 bg-white p-10 text-xl text-black">
+          <div className="absolute left-0 top-0 z-50 flex h-[100vh] w-full animate-fadeInLeft flex-col items-center gap-10 bg-white p-10 text-xl text-black">
             <div className="flex w-full flex-row justify-between">
               <button className="flex">
                 <Image
