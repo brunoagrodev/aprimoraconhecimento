@@ -72,7 +72,15 @@ const DifferencesContent = () => {
         className="mb-2 mt-10 flex justify-center sm:mt-16"
         data-aos="fade-up"
       >
-        <Button size="sm">ENTRAR EM CONTATO</Button>
+        {' '}
+        <a
+          href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_PHONE_WPP}&text=${encodeURIComponent(
+            ' Olá! Gostaria de solicitar um orçamento.',
+          )}`}
+          target="_blank"
+        >
+          <Button size="sm">ENTRAR EM CONTATO</Button>
+        </a>
       </div>
     </section>
   )

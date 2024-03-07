@@ -20,7 +20,7 @@ const Footer = () => {
         className="footer-up container my-10 w-full rounded-[56px] bg-[#101b2b] py-10"
         data-aos="fade-up"
       >
-        <h1 className="text-center text-5xl font-bold text-white md:text-center">
+        <h1 className="text-center text-4xl font-bold text-white sm:text-5xl md:text-center">
           Podemos ajudar ?
         </h1>
         <p className="p-10 text-center font-lustria text-lg text-white md:text-center">
@@ -34,7 +34,7 @@ const Footer = () => {
       <div className="footer-down flex w-full flex-col items-center justify-center">
         <span className="mb-20 flex flex-col items-center justify-center gap-10 sm:flex-row md:space-x-28 lg:space-x-60 xl:space-x-96">
           <Image src="/head/logo.svg" width={159} height={38} alt="Logotipo" />
-          <span className="flex flex-row items-center justify-center gap-20">
+          <span className="flex flex-row items-center justify-center gap-14 sm:gap-20">
             <a
               href="https://www.linkedin.com/company/aprimoraconhecimento/"
               target="_blank"
@@ -85,10 +85,12 @@ const Footer = () => {
             </a>
           </span>
         </span>
-        <p className="mb-10 flex w-full items-center justify-center text-center font-lustria text-lg">
-          &copy; Copyright 2024 - Todos os direitos reservados - Aprimora
-          Conhecimento
-        </p>
+        <a href="/privacypolicy">
+          <p className="mb-10 flex w-full items-center justify-center text-center font-lustria text-lg">
+            &copy; Copyright 2024 - Todos os direitos reservados - Aprimora
+            Conhecimento
+          </p>
+        </a>
       </div>
     </div>
   )

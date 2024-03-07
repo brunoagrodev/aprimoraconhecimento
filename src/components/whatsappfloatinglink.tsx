@@ -9,6 +9,7 @@ export default function WhatsappFloatingLink() {
         href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_PHONE_WPP}&text=${encodeURIComponent(
           ' Olá! Gostaria de solicitar um orçamento.',
         )}`}
+        target="_blank"
       >
         <IoLogoWhatsapp className="h-10 w-10 md:h-14 md:w-14" />
       </Link>

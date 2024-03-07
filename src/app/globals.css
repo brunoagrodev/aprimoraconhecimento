@@ -12,6 +12,10 @@
   animation: slideUp 300ms ease-out;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 @keyframes slideDown {
   from {
     height: 0;

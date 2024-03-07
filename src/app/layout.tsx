@@ -14,8 +14,9 @@ const lustria = Lustria({
 })
 
 export const metadata: Metadata = {
-  title: 'Aprimora Conhecimento',
-  description: 'Aprimora Conhecimento',
+  title: 'Aprimora Conhecimento - Empresa de Soluções Digitais',
+  description:
+    'Transforme sua presença online com nossas soluções digitais. Criamos identidades visuais marcantes e sites envolventes para impulsionar seu negócio no mundo digital. Entre em contato para aumentar sua presença digital.',
 }
 
 export default function RootLayout({

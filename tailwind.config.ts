@@ -21,7 +21,6 @@ const config: Config = {
         sans: 'var(--font-exo)',
         lustria: 'var(--font-lustria)',
       },
-
       colors: {
         white: '#fff',
         darkText: '#101B2B',
@@ -32,6 +31,36 @@ const config: Config = {
         orange: '#F47A1E',
         lightOrange: '#FFAC73',
         lightHover: '#BBC3CE',
+      },
+      keyframes: {
+        fadeOutLeft: {
+          '0%': {
+            opacity: '0',
+            transform:
+              'translateX(0)' /* Modificado: translateX em vez de translateY */,
+          },
+          '100%': {
+            opacity: '1',
+            transform:
+              'translateX(100%)' /* Modificado: translateX em vez de translateY */,
+          },
+        },
+        fadeInLeft: {
+          '0%': {
+            opacity: '0',
+            transform:
+              'translateX(100%)' /* Modificado: translateX em vez de translateY */,
+          },
+          '100%': {
+            opacity: '1',
+            transform:
+              'translateX(0)' /* Modificado: translateX em vez de translateY */,
+          },
+        },
+      },
+      animation: {
+        fadeInLeft: 'fadeInLeft 1s ease-in-out',
+        fadeOutLeft: 'fadeOutLeft 1s ease-in-out',
       },
     },
     plugins: [],

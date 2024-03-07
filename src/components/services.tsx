@@ -84,7 +84,14 @@ const Services = () => {
             data-aos="fade-up"
           >
             <div className="flex w-full items-center justify-center">
-              <Button color="lightOrange">FALE CONOSCO!</Button>
+              <a
+                href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_PHONE_WPP}&text=${encodeURIComponent(
+                  ' Olá! Gostaria de solicitar um orçamento.',
+                )}`}
+                target="_blank"
+              >
+                <Button color="lightOrange">FALE CONOSCO!</Button>
+              </a>
             </div>
           </article>
         </div>
