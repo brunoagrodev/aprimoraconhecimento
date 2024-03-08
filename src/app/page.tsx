@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="container">
       <HeaderMenu />
-      <div className="container py-20">
+      <div className="container pt-20">
         <HeaderContent />
         <Intro />
         <DifferencesContent />
