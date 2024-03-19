@@ -40,11 +40,11 @@ export default function HeaderMenu() {
             Serviços
           </p>
         </Link>
-        <Link href={'/#team'}>
+        {/*<Link href={'/#team'}>
           <p className="cursor-pointer" onClick={handleMenu}>
             Equipe
           </p>
-        </Link>
+      </Link>*/}
         <Link href={'/#contato'}>
           <p className="cursor-pointer" onClick={handleMenu}>
             Contato
@@ -93,11 +93,11 @@ export default function HeaderMenu() {
                   Serviços
                 </p>
               </Link>
-              <Link href={'/#team'}>
+              {/*<Link href={'/#team'}>
                 <p className="cursor-pointer" onClick={handleMenu}>
                   Equipe
                 </p>
-              </Link>
+              </Link>*/}
               <Link href={'/#contato'}>
                 <p className="cursor-pointer" onClick={handleMenu}>
                   Contato

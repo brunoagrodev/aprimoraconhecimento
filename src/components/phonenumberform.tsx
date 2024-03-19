@@ -117,8 +117,8 @@ export default function PhoneNumberForm() {
           </p>
         )}
         {response.type === 'success' && (
-          <p className="text-5 md:text-4 absolute ml-10  text-center italic text-green-500">
-            Entraremos em Contato em Breve
+          <p className="text-5 md:text-4 absolute ml-10 mt-2 text-center italic text-white">
+            Entraremos em contato em breve
           </p>
         )}
       </form>
