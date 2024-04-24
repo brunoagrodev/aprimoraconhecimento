@@ -18,17 +18,16 @@ const Question = () => {
     {
       question: 'O que oferecemos como produto ou serviço?',
       reply:
-        'Oferecemos soluções digitais exclusivas para profissionais autônomos e pequenos negócios, incluindo sites, landing pages, identidade visual, SEO e suporte. Nosso objetivo é impulsionar o crescimento online de seus negócios.',
+       'Vendemos identidades visuais em três pacotes fechados, cada um com elementos específicos para atender às necessidades do seu negócio.'
     },
     {
-      question: 'Quais são os nossos valores de produtos/serviços?',
+      question: 'Quais são os valores de produtos/serviços?',
       reply:
-        'Nossos valores centrais são qualidade, acessibilidade e inovação. Oferecemos soluções digitais de alta qualidade a preços que cabem no seu bolso, garantindo uma presença online extraordinária.',
-    },
+      'Nossos pacotes de identidade visual possuem preços fixos, proporcionando facilidade na escolha do que melhor atende às suas necessidades.'},
     {
       question: 'Qual o tempo de entrega para o meu pedido?',
       reply:
-        'O tempo de entrega varia de acordo com o serviço contratado. Mas, como a gente sabe que você está ansioso para ver o seu negócio decolar, vamos fazer o possível para entregar o mais rápido possível.',
+        'O tempo de entrega varia de acordo com o pacote contratado. Mas, como a gente sabe que você está ansioso para ver o seu negócio decolar, vamos fazer o possível para entregar o mais rápido possível.',
     },
     {
       question: 'Garantia/Política de reembolso?',
@@ -47,6 +46,7 @@ const Question = () => {
           <p>Aceitamos as seguintes formas de pagamento:</p>
           <ul className="ml-5 list-disc">
             <li className="">Pix</li>
+            <li>Cartão de credito</li>
             <li>Transferência bancária</li>
             <li>Boleto bancário</li>
           </ul>

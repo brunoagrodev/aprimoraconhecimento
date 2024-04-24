@@ -15,37 +15,13 @@ const Services = () => {
   }, [])
 
   const cards = [
-    {
-      title: 'Websites',
-      description:
-        'Criamos websites com aparência inovadoras e impactantes de alto desempenho, adaptados às necessidades do seu negócio.',
-      icon: '/services/webIcon.svg',
-    },
-    {
-      title: 'Landing Page',
-      description:
-        'Desenvolvemos Landing Pages visualmente atrativas e de alta performance para destacar seus produtos e serviços de uma maneira confrontante.',
-      icon: '/services/landingIcon.svg',
-    },
-    {
-      title: 'Identidade Visual',
-      description:
-        'Desenvolvemos logotipos e identidades visuais que capturam a essência única da sua marca de forma expressiva.',
-      icon: '/services/idIcon.svg',
-    },
-    {
-      title: 'Otimização de SEO',
-      description:
-        'Aumentamos sua visibilidade nas mais diversas plataformas digitais.',
-      icon: '/services/seoIcon.svg',
-    },
-    {
-      title: 'Manutenção e Suporte',
-      description:
-        'Traremos as melhores soluções adquiridas para solucionar os diversos problemas nas plataformas online.',
-      icon: '/services/supportIcon.svg',
-    },
-  ]
+      {
+        title: 'Identidade Visual',
+        description:
+          'Desenvolvemos logotipos e identidades visuais que capturam a essência única da sua marca de forma expressiva.',
+        icon: '/services/idIcon.svg',
+      },
+    ]    
 
   const width = typeof window !== 'undefined' ? window.innerWidth : 0
 
@@ -101,3 +77,41 @@ const Services = () => {
 }
 
 export default Services
+
+
+
+/*
+const cards = [
+  {
+    //title: 'Websites',
+    //description:
+      //'Criamos websites com aparência inovadoras e impactantes de alto desempenho, adaptados às necessidades do seu negócio.',
+    //icon: '/services/webIcon.svg',
+  },
+  {
+    //title: 'Landing Page',
+    //description:
+      //'Desenvolvemos Landing Pages visualmente atrativas e de alta performance para destacar seus produtos e serviços de uma maneira confrontante.',
+    //icon: '/services/landingIcon.svg',
+  },
+  {
+    title: 'Identidade Visual',
+    description:
+      'Desenvolvemos logotipos e identidades visuais que capturam a essência única da sua marca de forma expressiva.',
+    icon: '/services/idIcon.svg',
+  },
+  {
+    //title: 'Otimização de SEO',
+    //description:
+      //'Aumentamos sua visibilidade nas mais diversas plataformas digitais.',
+    //icon: '/services/seoIcon.svg',
+  },
+  {
+    //title: 'Manutenção e Suporte',
+    //description:
+      //'Traremos as melhores soluções adquiridas para solucionar os diversos problemas nas plataformas online.',
+    //icon: '/services/supportIcon.svg',
+  },
+]
+
+*/

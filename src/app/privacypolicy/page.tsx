@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
 
           <p className="px-4 py-2">
             Se tiver alguma dúvida sobre esta Política, entre em contato conosco
-            pelo e-mail fornecido acima.
+            pelo e-mail <strong>aprimoraconhecimento@gmail.com</strong>
           </p>
         </div>
       </div>

@@ -60,7 +60,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.youtube.com/@aprimoraconhecimento"
+              href="https://www.youtube.com/@aprimoralabs"
               target="_blank"
               className="items-center justify-center rounded-full bg-[#101b2b] p-4"
             >
@@ -72,7 +72,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.tiktok.com/@aprimora.conhecim"
+              href="https://www.tiktok.com/@aprimoralabs"
               target="_blank"
               className="items-center justify-center rounded-full bg-[#101b2b] p-4"
             >
