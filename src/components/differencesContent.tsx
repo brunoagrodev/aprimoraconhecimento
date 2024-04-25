@@ -22,7 +22,7 @@ const textContent = [
   {
     title: 'Soluções Inovadoras.',
     subTitle:
-      'Nós trazemos soluções digitais que fazem a diferença. Criamos sites incríveis, uma identidade visual única e oferecemos suporte contínuo, além de otimizar seu SEO para se destacar online.',
+      'Criamos identidades visuais que fazem a diferença. Utilizamos técnicas criativas e estratégicas para destacar sua marca e garantir sua presença online única e memorável.',
     image: '/differences/notebook.jpg',
   },
 ]
